@@ -1,0 +1,43 @@
+@tailwind base;
+
+@tailwind components;
+
+.w-72{
+    width: 22rem;
+}
+.w-128{
+    width: 24rem;
+}
+.h-72{
+    height: 22rem;
+}
+.w-custom{
+    width: 40rem;
+}
+.container{
+    max-width: 1400px;
+}
+.worksans {
+    font-family: 'Work Sans', sans-serif;
+}
+        
+#menu-toggle:checked + #menu {
+    display: block;
+}
+
+.hover\:grow {
+    transition: all 0.3s;
+    transform: scale(1);
+}
+
+.hover\:grow:hover {
+    transform: scale(1.02);
+}
+.pagination{
+    @apply flex;
+}
+.page-item{
+    @apply mx-1 px-3 py-2 bg-gray-200 text-gray-700 rounded-lg;
+}
+
+@tailwind utilities;
