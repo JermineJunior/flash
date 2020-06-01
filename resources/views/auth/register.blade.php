@@ -17,7 +17,7 @@
                 {{ __('Login') }}
             </a>
         </p>
-        <div class='flex justify-center my-2'>
+        <div class='flex justify-center my-2 mx-4'>
             <form class='w-full max-w-xl bg-white rounded-lg p-6' method="POST" action="{{ route('register') }}">
                 @csrf
                 <div class='flex flex-wrap -mx-3 mb-6'>

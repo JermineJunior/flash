@@ -15,7 +15,7 @@
         </p>
         @endif
     </div>
-    <div class='flex justify-center my-2'>
+    <div class='flex justify-center my-2 mx-4'>
         <form class='w-full max-w-xl bg-white rounded-lg shadow-sm p-6' method="POST" action="{{ route('login') }}">
             @csrf
             <div class='flex flex-wrap -mx-3 mb-6'>
@@ -37,20 +37,17 @@
                     {{ $message }}
                 </p>
                 @enderror
-                <div class="flex items-center mb-8 px-4">
-                    <label class="inline-flex w-1/2 mr-56 items-center text-sm text-gray-800" for="remember">
-                        <input type="checkbox" name="remember" id="remember" class="form-checkbox bg-gray-100" {{ old('remember') ? 'checked' : '' }}>
-                        <span class="ml-2">{{ __('Remember Me') }}</span>
+                <div class="w-full flex items-center justify-between px-3 mb-3 ">
+                    <label for="remember" class="flex items-center w-1/2">
+                        <input type="checkbox" name="" id="" class="mr-1 bg-white shadow"  {{ old('remember') ? 'checked' : '' }}>
+                        <span class="text-sm text-gray-700 pt-1">Remember Me</span>
                     </label>
-                    <div class="w-1/2 right-0">
+                    <div class="w-1/2 text-right">
                         @if (Route::has('password.request'))
-                        <a class="text-sm text-blue-500 hover:text-blue-800 whitespace-no-wrap no-underline" href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
-                        </a>
+                        <a href="#" class="text-blue-500 text-sm tracking-tight">Forget your password?</a>
                         @endif
                     </div>
                 </div>
-                
                 <div class="px-4 mt-4 w-full">
                     <button type="submit" class="bg-blue-500 w-full text-center hover:bg-blue-800 text-gray-100 font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">
                         {{ __('Login') }}
