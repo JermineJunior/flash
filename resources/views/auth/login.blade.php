@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="login mt-1">
-    <h2 class=" text-center text-xl font-bold">
+<div class="login mt-2">
+    <h2 class=" text-center text-xl pt-1 font-bold">
         Sign in to your account
     </h2>
     <div class="text-center pb-px">
         @if (Route::has('register'))
         <p class="w-full text-sm text-center text-gray-800 mt-2">
             or
-            <a class="text-blue-500 hover:text-blue-800 no-underline" href="{{ route('register') }}">
+            <a class="text-orange-500 hover:text-orange-800 no-underline" href="{{ route('register') }}">
                 register a new account
             </a>
         </p>
@@ -44,12 +44,12 @@
                     </label>
                     <div class="w-1/2 text-right">
                         @if (Route::has('password.request'))
-                        <a href="#" class="text-blue-500 text-sm tracking-tight">Forget your password?</a>
+                        <a href="#" class="text-orange-500 text-sm tracking-tight">Forget your password?</a>
                         @endif
                     </div>
                 </div>
                 <div class="px-4 mt-4 w-full">
-                    <button type="submit" class="bg-blue-500 w-full text-center hover:bg-blue-800 text-gray-100 font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">
+                    <button type="submit" class="bg-orange-600 w-full text-center hover:bg-orange-700 text-gray-100 font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">
                         {{ __('Login') }}
                     </button>
                 </div>
