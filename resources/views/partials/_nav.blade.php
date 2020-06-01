@@ -1,5 +1,5 @@
 <body class="bg-gray-300">
-    <nav id="header" class="w-full z-30 top-0 py-1 bg-white shadow-lg border-b border-orange-400">
+    <nav id="header" class="w-full z-30 top-0 py-1 shadow-lg border-b border-orange-400" style="background-image: url('/images/orange.jpg');">
         <div class="w-full flex items-center justify-between mt-0 px-6 py-2">
             <label for="menu-toggle" class="cursor-pointer md:hidden block">
                 <svg class="fill-current text-blue-600" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
@@ -20,7 +20,7 @@
             <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
                 @guest
                 <div class="auth flex items-center w-full md:w-full">
-                    <a class="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700" href="{{ route('login') }}">Sign in</a>
+                    <a class="bg-transparent text-white  p-2 rounded border border-gray-500 mr-4 hover:bg-gray-100 hover:text-gray-700" href="{{ route('login') }}">Sign in</a>
                     @if (Route::has('register'))
                     <a class="bg-orange-600 text-gray-200  p-2 rounded  hover:bg-orange-500 hover:text-gray-100" href="{{ route('register') }}">Sign up</a>
                     @endif
