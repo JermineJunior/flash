@@ -8,7 +8,7 @@
             <a class="text-xl inline-block no-underline  leading-relaxed" href="#">products</a>
         </div>
     </div>
-    <section class="mt-4 md:mt-0 mx-4 md:mx-0 w-full md:w-1/2 ">
+    {{-- <section class="mt-4 md:mt-0 mx-4 md:mx-0 w-full md:w-1/2 ">
         <h2 class="text-white text-xl px-4">Recent Items</h2>
         <div class="max-w-xs bg-orange-400 shadow-lg rounded-lg overflow-hidden my-4">
             <div class="px-4 py-2">
@@ -21,6 +21,6 @@
                 <button class="px-3 py-1 bg-orange-400 text-sm text-gray-200 font-semibold rounded">Add to card</button>
             </div>
         </div>
-    </section>
+    </section> --}}
 </div>
 @endsection
