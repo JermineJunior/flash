@@ -16,7 +16,7 @@
         @endif
     </div>
     <div class='flex justify-center my-2 mx-4'>
-        <form class='w-full max-w-xl bg-white rounded-lg shadow-sm p-6' method="POST" action="{{ route('login') }}">
+        <form class='w-full max-w-xl bg-white rounded-lg shadow p-6' method="POST" action="{{ route('login') }}">
             @csrf
             <div class='flex flex-wrap -mx-3 mb-6'>
                 <div class='w-full md:w-full px-3 mb-6'>

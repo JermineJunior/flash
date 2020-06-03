@@ -18,7 +18,7 @@
             </a>
         </p>
         <div class='flex justify-center my-2 mx-4'>
-            <form class='w-full max-w-xl bg-white rounded-lg p-6' method="POST" action="{{ route('register') }}">
+            <form class='w-full max-w-xl bg-white shadow rounded-lg p-6' method="POST" action="{{ route('register') }}">
                 @csrf
                 <div class='flex flex-wrap -mx-3 mb-6'>
                     <div class='w-full md:w-1/2 px-3 mb-6'>
