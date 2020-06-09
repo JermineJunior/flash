@@ -8,12 +8,11 @@ class Book extends Model
 {
     protected $table = 'books';
     
-    protected $fillable = array('title','isbn','price','author_id');
+    protected $fillable = ['title','isbn','price','author_id'];
     
-    public function Author(){
-        
-        return $this->belongsTo(App\Author::class,'author_id');
-        
+    public function Author()
+    {    
+        return $this->belongsTo(App\Author::class,'author_id');   
     }
     
 }
