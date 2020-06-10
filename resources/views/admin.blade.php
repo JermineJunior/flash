@@ -10,16 +10,26 @@
                 </div>
             @endif
 
-            <div class="flex flex-col break-words bg-white border border-2 rounded shadow-md">
-
+            <div class="flex flex-col mt-6 bg-white border border-2 rounded shadow-md">
                 <div class="font-semibold bg-gray-200 text-gray-700 py-3 px-6 mb-0">
                     Admins Dashboard
                 </div>
 
                 <div class="w-full p-6">
-                    <p class="text-gray-700">
-                        You are logged in! as a Admin
-                    </p>
+                   <table>
+                       <thead>
+                           <th>#</th>
+                           <th>Name</th>
+                       </thead>
+                       <tbody>
+                           @foreach ($authors as $author)
+                               <tr>
+                                   <td>@</td>
+                                   <td>{{ $author->name }}</td>
+                               </tr>
+                           @endforeach
+                       </tbody>
+                   </table>
                 </div>
             </div>
         </div>
