@@ -10,9 +10,9 @@
                 </div>
             @endif
 
-            <div class="flex flex-col mt-6 bg-white border border-2 rounded shadow-md">
+            <div class="flex flex-col mt-6 bg-white border border-2 rounded shadow-md mx-4 md:mx-0">
                 <div class="font-semibold bg-gray-200 text-gray-700 py-3 px-6 mb-0">
-                    Admins Dashboard
+                   Authors
                 </div>
 
                 <div class="w-full p-6">
@@ -22,7 +22,7 @@
                            <th>Name</th>
                        </thead>
                        <tbody>
-                           @foreach ($authors as $author)
+                           @foreach ($authors ?? '' as $author)
                                <tr>
                                    <td>@</td>
                                    <td>{{ $author->name }}</td>

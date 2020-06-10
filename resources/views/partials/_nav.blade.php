@@ -9,9 +9,9 @@
             </label>
             <input class="hidden" type="checkbox" id="menu-toggle">
             
-            <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+            <div class="hidden md:flex md:items-center md:w-auto w-full order-2 md:order-1" id="menu">
                 <nav>
-                    <ul class="md:flex items-center justify-between text-lg text-orange-700 pt-4 md:pt-0">
+                    <ul class="md:flex items-center justify-between text-lg text-orange-700 pt-4 md:pt-0 -mt-3 md:mt-0">
                         <li><a class="inline-block no-underline font-medium text-lg py-2 px-4 lg:-ml-2" href="/">Eco<span class="text-gray-700">Market</span></a></li>
                     </ul>
                 </nav>
@@ -30,7 +30,7 @@
                     </a>
                     
                     <a href="{{ route('user.logout') }}"
-                    class="no-underline hover:underline text-indigo-500 text-sm p-3"
+                    class="no-underline  text-orange-600 text-sm p-3"
                     onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
