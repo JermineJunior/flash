@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use App\Admin;
+use Tests\TestCase;
+use App\{User,Admin};
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Tests\TestCase;
 
 class AdminTest extends TestCase
 {
@@ -31,6 +31,32 @@ class AdminTest extends TestCase
         $response = $this->get('/admin')
                 ->assertStatus(302); 
     }
+
+    public function admins_can_logout()
+    {
+        $this->signInAdmin();
+
+        $response = $this->get('/admin/logout');
+
+        $response = $this->get('/admin')
+             ->assertStatus(302);
+
+    }
+
+    /** login admins */
+ 
+    protected function signInAdmin()
+    {
+        $admin = factory(Admin::class)->create();
+
+        $this->actingAs($admin, 'admin');
+    }
+
+    protected function signIn()
+    {
+        $this->actingAs(factory(User::class)->create());
+    }
+
 
 }
         

@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\User;
 use Tests\TestCase;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -31,4 +32,20 @@ class UserTest extends TestCase
        $this->get('/home')->assertStatus(200);
    
    }
+
+    /** @test */
+    public function users_can_logout()
+    {
+        $this->signIn();
+
+        $response = $this->post('/logout');
+
+        $response = $this->get('/home')
+                ->assertStatus(302);
+    }
+
+    protected function signIn()
+    {
+        $this->actingAs(factory(User::class)->create());
+    }
 }
